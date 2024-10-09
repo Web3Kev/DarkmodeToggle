@@ -5,6 +5,9 @@ background-color: #f2f2f7;
 color: black;
 }
 
+
+
+
 .main-div{
     position: absolute;
     top: 0;
@@ -17,9 +20,11 @@ color: black;
 }
 
 .main-text {
-    font-size: 48px;
+    font-size: 30px;
     text-align: center;
     font-weight: bold;
+    border-radius: 10px;
+    padding:10px;
 }
 
 /* dark/light mode toggle */
@@ -112,6 +117,20 @@ background-color: #f2f2f7;
 color: black;
 }
 
+body.light-mode #arrowheadPolygon
+{
+    fill: rgb(196, 196, 196);
+}
+
+body.light-mode #arrow
+{
+    stroke: rgb(196, 196, 196);
+}
+
+body.light-mode .main-text {
+    border: 2px solid rgb(196, 196, 196);
+}
+
 /* darkmode */
 body.dark-mode .slider {
     background-color: #222224; /* Grey background */
@@ -130,4 +149,18 @@ body.dark-mode .slider:before {
 body.dark-mode {
 background-color: #1c1c1e;
 color: lightgrey;
+}
+
+body.dark-mode #arrowheadPolygon
+{
+    fill: rgb(152, 119, 1);
+}
+
+body.dark-mode #arrow
+{
+    stroke: rgb(152, 119, 1);
+}
+
+body.dark-mode .main-text {
+    border: 2px solid rgb(152, 119, 1);
 }
