@@ -1,12 +1,3 @@
-/* default for smartphone */
-
-body {
-background-color: #f2f2f7;
-color: black;
-}
-
-
-
 
 .main-div{
     position: absolute;
@@ -27,8 +18,12 @@ color: black;
     padding:10px;
 }
 
-/* dark/light mode toggle */
 
+/* ---------------------------------------------------- */
+/*                      Toggle style                    */
+/* ---------------------------------------------------- */
+
+/* small screens --- starts*/
 .switch {
 position: fixed;
 top: 52px; 
@@ -39,7 +34,6 @@ height: 20px;
 z-index: 1000;
 }
 
-/* Hide the default checkbox */
 .switch input {
 opacity: 0; 
 width: 0; 
@@ -71,96 +65,118 @@ transition: .4s;
 input:checked + .slider:before {
 transform: translateX(15px); 
 }
+/*  small screens --- ends*/
 
-/* big screen : desktop or ipad */
+
+/*  big screens, ipad included --- starts*/
 @media (min-width: 768px) {
 
     .switch {
-        top: 20px; /* Distance from the top */
-        right: 20px; /* Distance from the right */
-        width: 60px; /* Width of the switch */
-        height: 34px; /* Height of the switch */
+        top: 20px; 
+        right: 20px; 
+        width: 60px; 
+        height: 34px; 
     }
     
     .slider:before {
     
-        height: 28px; /* Height of the circle */
-        width: 28px; /* Width of the circle */
-        left: 4px; /* Space from left */
+        height: 28px; 
+        width: 28px; 
+        left: 4px;
         bottom:2px
-        
     }
     
     input:checked + .slider:before {
-        transform: translateX(26px); /* Move the circle to the right */
+        transform: translateX(26px); 
     }
 }
+/*  big screens, ipad included --- ends*/
 
-/* back to light mode  */
+
+/* ---------------------------------------------------- */
+/* light mode look : add "body.light-mode" to your style*/
+/* ---------------------------------------------------- */
+
+/* toggle style in light mode --- starts */
 body.light-mode .slider {
-    background-color: lightgray; /* Grey background */
+    background-color: lightgray; 
     border: 1px solid grey;
 }
 
-/* Change background color when checked */
 body.light-mode input:checked + .slider {
-    background-color: lightgray; /* Blue background when checked */
+    background-color: lightgray; 
     border: 1px solid grey;
 }
 
 body.light-mode .slider:before {
-    background-color: white; /* White circle */
+    background-color: white; 
 }
+/* toggle style in light mode --- ends */
 
+/* body style in light mode */
 body.light-mode {
 background-color: #f2f2f7;
 color: black;
 }
 
+/* arrow head style in light mode */
 body.light-mode #arrowheadPolygon
 {
     fill: rgb(196, 196, 196);
 }
 
+/* arrow path style in light mode */
 body.light-mode #arrow
 {
     stroke: rgb(196, 196, 196);
 }
 
+/* text "toggle this" style in light mode */
 body.light-mode .main-text {
     border: 2px solid rgb(196, 196, 196);
 }
 
-/* darkmode */
+
+
+/* ---------------------------------------------------- */
+/* Dark mode look : add "body.dark-mode" to your style*/
+/* ---------------------------------------------------- */
+
+/* toggle style in dark mode --- starts */
 body.dark-mode .slider {
-    background-color: #222224; /* Grey background */
+    background-color: #222224; 
     border: 1px solid grey;
 }
 
 body.dark-mode input:checked + .slider {
-    background-color: #222224; /* Blue background when checked */
+    background-color: #222224; 
     border: 1px solid grey;
 }
 
 body.dark-mode .slider:before {
-    background-color: teal; /* White circle */
+    background-color: teal; 
 }
+/* toggle style in dark mode --- ends */
 
+/* body style in dark mode */
 body.dark-mode {
-background-color: #1c1c1e;
-color: lightgrey;
+    background-color: #1c1c1e;
+    color: lightgrey;
 }
 
+/* arrow head style in dark mode */
 body.dark-mode #arrowheadPolygon
 {
     fill: rgb(152, 119, 1);
 }
 
+/* arrow path style in dark mode */
 body.dark-mode #arrow
 {
     stroke: rgb(152, 119, 1);
 }
 
+/* text "toggle this" style in dark mode */
 body.dark-mode .main-text {
     border: 2px solid rgb(152, 119, 1);
 }
